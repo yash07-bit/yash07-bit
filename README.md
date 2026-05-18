@@ -1,11 +1,16 @@
-<h1 align="center">Hi 👋, I'm Yash Waghmare</h1>
+<h1 align="center">Hey 👋, I'm Yash Waghmare</h1>
+
 <h3 align="center">
-WebOps Head @ Spirit IIT Guwahati | Aspiring Software Engineer | Frontend Developer
+Aspiring Software Engineer • Frontend Developer • WebOps Head @ Spirit IIT Guwahati
 </h3>
 
 <p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=Aspiring+Software+Engineer;Frontend+Developer;Competitive+Programmer;Building+Scalable+Web+Experiences" />
+</p>
+
+<p align="center">
   <a href="https://github.com/yash07-bit">
-    <img src="https://komarev.com/ghpvc/?username=yash07-bit&label=Profile%20Views&color=0e75b6&style=flat" alt="profile views"/>
+    <img src="https://komarev.com/ghpvc/?username=yash07-bit&label=Profile+Views&color=0ea5e9&style=for-the-badge" />
   </a>
 </p>
 
@@ -15,61 +20,47 @@ WebOps Head @ Spirit IIT Guwahati | Aspiring Software Engineer | Frontend Develo
 
 🎓 **B.Tech Mechanical Engineering @ IIT Guwahati**  
 💻 Passionate about **Software Engineering, Frontend Development & Problem Solving**  
-🌐 Currently serving as **WebOps Head, Spirit IIT Guwahati**  
-📈 Consistently improving skills in **DSA, Competitive Programming & Web Development**  
-🎯 Goal: Become a **high-level Software Engineer building scalable products**
+🌐 Currently serving as **WebOps Head @ Spirit IIT Guwahati**  
+📈 Improving skills in **DSA, Competitive Programming & Web Development**  
+🎯 Goal: Become a **Top Software Engineer building scalable products**
 
 ---
 
-## 🔥 Current Focus
+## ⚡ Tech Stack
 
-- ⚛️ Building modern web applications using **React.js**
-- 🧠 Practicing **Data Structures & Algorithms**
-- 🎨 Exploring **UI/UX, Animations & Interactive Web Experiences**
-- 🚀 Building real-world projects for software engineering growth
-- 💡 Improving problem-solving through **LeetCode & Competitive Programming**
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=c,cpp,js,html,css,react,nodejs,express,mongodb,mysql,git,github,vscode,figma&perline=7" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=Canva&logoColor=white"/>
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## 🚧 Current Focus
 
-### Languages
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript)
-
-### Frontend
-![HTML5](https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5)
-![CSS3](https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3)
-![React](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react)
-
-### Backend & Database
-![Node.js](https://img.shields.io/badge/Node.js-black?style=for-the-badge&logo=node.js)
-![Express.js](https://img.shields.io/badge/Express.js-black?style=for-the-badge&logo=express)
-![MongoDB](https://img.shields.io/badge/MongoDB-black?style=for-the-badge&logo=mongodb)
-![MySQL](https://img.shields.io/badge/MySQL-black?style=for-the-badge&logo=mysql)
-
-### Tools & Design
-![Git](https://img.shields.io/badge/Git-black?style=for-the-badge&logo=git)
-![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github)
-![VS Code](https://img.shields.io/badge/VS_Code-black?style=for-the-badge&logo=visualstudiocode)
-![Figma](https://img.shields.io/badge/Figma-black?style=for-the-badge&logo=figma)
-![Canva](https://img.shields.io/badge/Canva-black?style=for-the-badge&logo=canva)
+- 🌍 Building **Wanderlust** — MERN Travel Listing Platform  
+- ⚛️ Building modern web apps using **React.js**  
+- 🧠 Practicing **Data Structures & Algorithms**  
+- 🎨 Exploring **UI/UX, Animations & Interactive Experiences**  
+- 🚀 Preparing for **Software Engineering Internships**
 
 ---
 
 ## 📂 Featured Projects
 
 ### 🌍 Wanderlust – Travel Listing Platform
-🚀 Full-stack travel listing application built with the **MERN Stack**
 
-✨ Features:
-- Authentication & Authorization
-- REST APIs
-- MongoDB Integration
-- Responsive UI
+🚀 Full-stack travel listing platform built using the **MERN Stack**
 
-🔗 Live Demo:  
+### ✨ Features
+- Authentication & Authorization  
+- REST APIs  
+- MongoDB Integration  
+- Responsive UI  
+
+🔗 **Live Demo:**  
 https://wanderlust-fuiy.onrender.com
 
 ---
@@ -83,41 +74,94 @@ https://wanderlust-fuiy.onrender.com
 
 ### WebOps Head – Spirit IIT Guwahati
 - Managing web operations for one of IIT Guwahati’s flagship festivals
-- Working on digital experiences and web initiatives
-- Collaborating with teams to improve technical workflows
+- Working on digital experiences and technical initiatives
+- Collaborating with teams to improve workflows
 
 ---
 
 ## 📈 Competitive Programming
 
 - Solving problems on **LeetCode & Codeforces**
-- Strengthening **DSA & problem-solving fundamentals**
-- Working toward becoming interview-ready for software roles
+- Strengthening **DSA & Problem Solving**
+- Working toward becoming **interview-ready for software roles**
+
+---
+
+## 🌐 Coding Profiles
+
+<p align="center">
+  <a href="https://leetcode.com/">
+    <img src="https://img.shields.io/badge/LeetCode-black?style=for-the-badge&logo=leetcode" />
+  </a>
+
+  <a href="https://codeforces.com/">
+    <img src="https://img.shields.io/badge/Codeforces-black?style=for-the-badge&logo=codeforces" />
+  </a>
+
+  <a href="https://github.com/yash07-bit">
+    <img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github" />
+  </a>
+</p>
 
 ---
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yash07-bit&show_icons=true&theme=tokyonight" />
-</p>
+<table align="center">
+<tr border="none">
+<td width="50%" align="center">
+
+<img 
+  src="https://github-readme-stats-sigma-five.vercel.app/api?username=yash07-bit&show_icons=true&theme=tokyonight&hide_border=true" 
+/>
+
+</td>
+
+<td width="50%" align="center">
+
+<img 
+  src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yash07-bit&layout=compact&theme=tokyonight&hide_border=true" 
+/>
+
+</td>
+</tr>
+</table>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yash07-bit&theme=tokyonight" />
+  <img 
+    width="60%"
+    src="https://github-readme-streak-stats.herokuapp.com/?user=yash07-bit&theme=tokyonight&hide_border=true"
+  />
+</p>
+
+---
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=yash07-bit&theme=tokyonight&margin-w=15&margin-h=15" />
 </p>
 
 ---
 
 ## 📫 Connect With Me
 
-📧 **Email:** w.prakash@iitg.ac.in  
+<p align="center">
+  <a href="mailto:w.prakash@iitg.ac.in">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
 
-💼 **LinkedIn:**  
-https://linkedin.com/in/waghmareyash07
+  <a href="https://linkedin.com/in/waghmareyash07">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
 
-💻 **GitHub:**  
-https://github.com/yash07-bit
+  <a href="https://github.com/yash07-bit">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
+  </a>
+</p>
 
 ---
 
-⭐ **Always learning, building, and improving.**
+<h3 align="center">
+⭐ Always learning, building, and improving.
+</h3>
