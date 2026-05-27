@@ -111,27 +111,20 @@ https://wanderlust-fuiy.onrender.com
 <tr border="none">
 <td width="50%" align="center">
 
-<img 
-  src="https://github-readme-stats-sigma-five.vercel.app/api?username=yash07-bit&show_icons=true&theme=tokyonight&hide_border=true" 
-/>
+<img src="https://github-readme-stats.vercel.app/api?username=yash07-bit&show_icons=true&theme=tokyonight&hide_border=true" />
 
 </td>
 
 <td width="50%" align="center">
 
-<img 
-  src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yash07-bit&layout=compact&theme=tokyonight&hide_border=true" 
-/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yash07-bit&layout=compact&theme=tokyonight&hide_border=true" />
 
 </td>
 </tr>
 </table>
 
 <p align="center">
-  <img 
-    width="60%"
-    src="https://github-readme-streak-stats.herokuapp.com/?user=yash07-bit&theme=tokyonight&hide_border=true"
-  />
+  <img width="60%" src="https://github-readme-streak-stats.herokuapp.com/?user=yash07-bit&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" />
 </p>
 
 ---
@@ -139,7 +132,7 @@ https://wanderlust-fuiy.onrender.com
 ## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=yash07-bit&theme=tokyonight&margin-w=15&margin-h=15" />
+  <img src="https://github-profile-badges.vercel.app/api/badges?username=yash07-bit&theme=tokyonight" alt="Yash's GitHub Trophies" />
 </p>
 
 ---
