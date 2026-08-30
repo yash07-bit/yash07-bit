@@ -1,0 +1,43 @@
+# Save this file to:  .github/workflows/snake.yml
+# in your profile repo (github.com/yash07-bit/yash07-bit)
+#
+# It regenerates the contribution-snake SVGs every day and pushes them
+# to an `output` branch, which the README then links to.
+#
+# One-time setup: Repo Settings → Actions → General → Workflow permissions
+#                 → select "Read and write permissions" → Save.
+
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # daily at 00:00 UTC
+  workflow_dispatch:       # lets you run it manually from the Actions tab
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        id: snake-gif
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
