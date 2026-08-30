@@ -86,6 +86,13 @@ def streaks(weeks):
 
 
 LANG_FALLBACK_COLOR = "#818CF8"
+LANG_COLORS = {
+    "JavaScript": "#f1e05a", "TypeScript": "#3178c6", "Python": "#3572A5",
+    "EJS": "#a91e50", "HTML": "#e34c26", "CSS": "#563d7c", "SCSS": "#c6538c",
+    "Java": "#b07219", "C": "#555555", "C++": "#f34b7d", "Shell": "#89e051",
+    "Jupyter Notebook": "#DA5B0B", "Vue": "#41b883", "Go": "#00ADD8",
+    "Ruby": "#701516", "PHP": "#4F5D95", "Dart": "#00B4AB", "Rust": "#dea584",
+}
 
 
 def rest(path):
@@ -120,7 +127,8 @@ def rest_fallback(d):
                 continue
         tot = sum(totals.values()) or 1
         top = sorted(totals.items(), key=lambda kv: -kv[1])[:6]
-        d["langs"] = [(n, v * 100.0 / tot, LANG_FALLBACK_COLOR) for n, v in top]
+        d["langs"] = [(n, v * 100.0 / tot, LANG_COLORS.get(n, LANG_FALLBACK_COLOR))
+                      for n, v in top]
     except Exception as e:
         print("WARN: REST repos failed:", e, file=sys.stderr)
     try:
@@ -134,27 +142,42 @@ def rest_fallback(d):
 def collect():
     d = {"contributions": 0, "commits": 0, "prs": 0, "stars": 0,
          "repos": 0, "followers": 0, "cur": 0, "long": 0, "langs": []}
-    u = graphql()
+    try:
+        u = graphql()
+    except Exception as e:
+        print("WARN: GraphQL call raised:", e, file=sys.stderr)
+        u = None
+
     if u:
-        cc = u["contributionsCollection"]
-        cal = cc["contributionCalendar"]
-        d["contributions"] = cal["totalContributions"]
-        d["commits"] = cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
-        d["prs"] = u["pullRequests"]["totalCount"]
-        d["repos"] = u["repositories"]["totalCount"]
-        d["followers"] = u["followers"]["totalCount"]
-        d["cur"], d["long"] = streaks(cal["weeks"])
-        totals, colors = {}, {}
-        for repo in u["repositories"]["nodes"]:
-            d["stars"] += repo["stargazerCount"]
-            for e in repo["languages"]["edges"]:
-                n = e["node"]["name"]
-                totals[n] = totals.get(n, 0) + e["size"]
-                colors[n] = e["node"]["color"] or "#818CF8"
-        tot = sum(totals.values()) or 1
-        top = sorted(totals.items(), key=lambda kv: -kv[1])[:6]
-        d["langs"] = [(n, v * 100.0 / tot, colors[n]) for n, v in top]
-    else:
+        try:
+            cc = u["contributionsCollection"]
+            cal = cc["contributionCalendar"]
+            d["contributions"] = cal["totalContributions"]
+            d["commits"] = cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
+            d["prs"] = u["pullRequests"]["totalCount"]
+            d["repos"] = u["repositories"]["totalCount"]
+            d["followers"] = u["followers"]["totalCount"]
+            d["cur"], d["long"] = streaks(cal["weeks"])
+            totals, colors = {}, {}
+            for repo in (u["repositories"]["nodes"] or []):
+                d["stars"] += repo.get("stargazerCount") or 0
+                # languages is null for repos linguist cannot classify
+                edges = (repo.get("languages") or {}).get("edges") or []
+                for e in edges:
+                    node = e.get("node") or {}
+                    n = node.get("name")
+                    if not n:
+                        continue
+                    totals[n] = totals.get(n, 0) + (e.get("size") or 0)
+                    colors[n] = node.get("color") or LANG_COLORS.get(n, LANG_FALLBACK_COLOR)
+            tot = sum(totals.values()) or 1
+            top = sorted(totals.items(), key=lambda kv: -kv[1])[:6]
+            d["langs"] = [(n, v * 100.0 / tot, colors[n]) for n, v in top]
+        except Exception as e:
+            print("WARN: GraphQL parse failed, falling back to REST:", e, file=sys.stderr)
+            u = None
+
+    if not u:
         rest_fallback(d)
     return d
 
@@ -232,7 +255,15 @@ def render(d):
 
 
 if __name__ == "__main__":
-    data = collect()
+    import traceback
+    try:
+        data = collect()
+    except Exception:
+        traceback.print_exc()
+        print("ERROR: collect() failed; emitting an empty card so the publish "
+              "step still runs and the snake stays live.", file=sys.stderr)
+        data = {"contributions": 0, "commits": 0, "prs": 0, "stars": 0,
+                "repos": 0, "followers": 0, "cur": 0, "long": 0, "langs": []}
     print("data:", {k: v for k, v in data.items() if k != "langs"})
     print("langs:", [(n, round(p, 1)) for n, p, _ in data["langs"]])
     os.makedirs(os.path.dirname(OUT) or ".", exist_ok=True)

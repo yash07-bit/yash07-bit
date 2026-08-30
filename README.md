@@ -159,9 +159,13 @@ Type a waste item, get its category and disposal guidance instantly.
   published to the `output` branch — NOT by github-readme-stats, whose
   public instance is DEPLOYMENT_PAUSED (HTTP 503). Self-hosting it means
   the Activity section cannot go dark because someone else ran out of quota.
+
+  No width="100%" here, same as the snake below: the SVG is 1200x300 and
+  GitHub already caps images at the column width, so leaving the intrinsic
+  size in place means a failed load shows a small box, not a giant one.
 -->
 <p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/stats.svg" alt="GitHub activity — contributions, commits, pull requests, streaks, repositories and top languages" />
+  <img src="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/stats.svg" alt="GitHub activity — contributions, commits, pull requests, streaks, repositories and top languages" />
 </p>
 
 <!--
