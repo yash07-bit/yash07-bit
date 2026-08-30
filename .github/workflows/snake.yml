@@ -1,8 +1,5 @@
-# Save this file to:  .github/workflows/snake.yml
-# in your profile repo (github.com/yash07-bit/yash07-bit)
-#
-# It regenerates the contribution-snake SVGs every day and pushes them
-# to an `output` branch, which the README then links to.
+# Regenerates the contribution-snake SVGs daily and pushes them to an
+# `output` branch, which the README links to.
 #
 # One-time setup: Repo Settings → Actions → General → Workflow permissions
 #                 → select "Read and write permissions" → Save.

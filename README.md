@@ -1,36 +1,37 @@
 <!--
   ─────────────────────────────────────────────────────────────
   Yash Waghmare · GitHub Profile README
-  Accent palette: #0EA5E9 (sky) → #38BDF8 (light sky) → #6366F1 (indigo)
-  All cards use a transparent background so they look correct in
-  BOTH GitHub light and dark themes.
+  Banner + stack graphics are hand-authored SVGs in ./assets —
+  self-hosted, so nothing here depends on a third-party image
+  service that can rate-limit or go down.
+  Each has a dark and a light variant, swapped via <picture>.
   ─────────────────────────────────────────────────────────────
 -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0EA5E9,50:38BDF8,100:6366F1&height=200&section=header&text=Yash%20Waghmare&fontSize=52&fontColor=FFFFFF&fontAlignY=34&animation=fadeIn&desc=Frontend%20Developer%20%C2%B7%20Aspiring%20Software%20Engineer%20%C2%B7%20WebOps%20Head%20@%20Spirit%20IITG&descAlignY=54&descSize=16" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg" />
+  <img width="100%" src="./assets/banner-dark.svg" alt="Yash Waghmare — Frontend Developer, Full-Stack Builder, B.Tech @ IIT Guwahati" />
+</picture>
 
 <p align="center">
-  <a href="https://github.com/yash07-bit">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=38BDF8&center=true&vCenter=true&width=620&lines=Aspiring+Software+Engineer;Frontend+Developer+%7C+React+%2B+Node;Turning+coffee+into+components;Building+scalable+web+experiences" alt="Typing SVG" />
-  </a>
-</p>
-
-<p align="center">
+  <a href="https://yash-waghmare.netlify.app"><img src="https://img.shields.io/badge/Portfolio-0EA5E9?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Portfolio" /></a>
   <a href="https://linkedin.com/in/waghmareyash07"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:w.prakash@iitg.ac.in"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://wanderlust-fuiy.onrender.com"><img src="https://img.shields.io/badge/Live_Project-0EA5E9?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Project" /></a>
   <img src="https://komarev.com/ghpvc/?username=yash07-bit&label=Profile+Views&color=0EA5E9&style=for-the-badge" alt="Profile views" />
 </p>
 
 <br />
 
-## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="26" /> &nbsp;whoami
+## &nbsp;`~` &nbsp;whoami
 
 ```ts
 const yash = {
   education   : "B.Tech, Mechanical Engineering @ IIT Guwahati",
   currentRole : "WebOps Head @ Spirit — IIT Guwahati's sports festival",
-  building    : ["Wanderlust — MERN travel platform", "spirit.iitg.ac.in"],
+  building    : ["Wanderlust · MERN travel platform",
+                 "NexaVault · React 19 finance dashboard",
+                 "spirit.iitg.ac.in"],
   learning    : ["Data Structures & Algorithms", "System Design", "Motion & UI/UX"],
   askMeAbout  : ["React", "Node / Express", "MongoDB", "Interactive web experiences"],
   goal        : "Ship products people actually enjoy using ✨",
@@ -41,71 +42,86 @@ const yash = {
 
 ## 🧰 &nbsp;Toolbox
 
-<table>
-  <tr>
-    <td align="right" width="130"><b>Languages</b></td>
-    <td><img src="https://skillicons.dev/icons?i=cpp,c,js,html,css&perline=5" height="42" /></td>
-  </tr>
-  <tr>
-    <td align="right"><b>Frontend</b></td>
-    <td><img src="https://skillicons.dev/icons?i=react,tailwind,vite,figma&perline=5" height="42" /></td>
-  </tr>
-  <tr>
-    <td align="right"><b>Backend&nbsp;&amp;&nbsp;DB</b></td>
-    <td><img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,mysql&perline=5" height="42" /></td>
-  </tr>
-  <tr>
-    <td align="right"><b>Tooling</b></td>
-    <td><img src="https://skillicons.dev/icons?i=git,github,vscode,postman&perline=5" height="42" /></td>
-  </tr>
-</table>
-
-<br />
-
-## 📊 &nbsp;By the Numbers
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=yash07-bit&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=00000000&title_color=0EA5E9&icon_color=38BDF8&text_color=808080&rank_icon=github" alt="GitHub stats" />
-  <img height="165" src="https://streak-stats.demolab.com?user=yash07-bit&hide_border=true&background=00000000&ring=0EA5E9&fire=6366F1&currStreakLabel=0EA5E9&sideLabels=808080&currStreakNum=808080&sideNums=808080&dates=808080&stroke=808080" alt="GitHub streak" />
-</p>
-
-<p align="center">
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yash07-bit&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=0EA5E9&text_color=808080" alt="Top languages" />
-</p>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=yash07-bit&bg_color=00000000&color=0EA5E9&line=38BDF8&point=6366F1&area=true&area_color=38BDF8&hide_border=true&custom_title=Contribution%20Activity" alt="Contribution graph" />
-
-<br />
-
-## 🏆 &nbsp;Trophy Shelf
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=yash07-bit&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="Trophies" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg" />
+  <img width="100%" src="./assets/stack-dark.svg" alt="Tech stack: JavaScript, Python, C++, C, HTML, CSS · React, Tailwind CSS, Vite, Framer Motion, EJS, Bootstrap · Node.js, Express, FastAPI, MongoDB, MySQL, REST APIs · Git, GitHub, VS Code, Postman, Vercel, Figma" />
+</picture>
 
 <br />
 
 ## 🚀 &nbsp;Featured Work
 
-<!-- Replace `repo=Wanderlust` below if your repository is named differently. -->
-<a href="https://github.com/yash07-bit/Wanderlust">
-  <img align="right" width="380" src="https://github-readme-stats.vercel.app/api/pin/?username=yash07-bit&repo=Wanderlust&hide_border=true&bg_color=00000000&title_color=0EA5E9&icon_color=38BDF8&text_color=808080" alt="Wanderlust repo card" />
-</a>
+<table>
+<tr>
+<td width="50%" valign="top">
 
-### 🌍 Wanderlust — Travel Listing Platform
+### 🌍 &nbsp;Wanderlust
 
-A full-stack travel listing app where users can publish, browse and review stays.
+Full-stack **MERN** travel listing app — publish, browse and review stays.
 
-- 🔐 Session-based **auth & authorization** with route-level guards
-- 🧭 **RESTful APIs** over Express with server-side validation
-- 🗄️ **MongoDB** schemas for listings, reviews and users
-- 📱 Fully **responsive** UI
+- 🔐 Session-based auth with route-level guards
+- 🧭 RESTful Express APIs + server-side validation
+- 🗄️ Mongo schemas for listings, reviews, users
+- 📱 Fully responsive UI
 
 `Node` `Express` `MongoDB` `EJS` `Bootstrap`
 
-**→ [Live demo](https://wanderlust-fuiy.onrender.com)**
+**[Live ↗](https://wanderlust-fuiy.onrender.com)** &nbsp;·&nbsp; **[Code ↗](https://github.com/yash07-bit/wanderlust)**
 
-<br clear="right" />
+</td>
+<td width="50%" valign="top">
+
+### 💰 &nbsp;NexaVault — Finance Dashboard
+
+Personal finance manager built on **React 19**, with real data flowing through it.
+
+- 📥 Excel (XLSX) import for transactions
+- 🔄 Bidirectional sync across every page
+- 📊 Budgets, insights, reports, monthly trends
+- 💱 Multi-currency (USD / EUR / GBP)
+
+`React 19` `Tailwind` `Vite`
+
+**[Live ↗](https://nexa-vault-three.vercel.app)** &nbsp;·&nbsp; **[Code ↗](https://github.com/yash07-bit/Finance-Dashboard)**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔀 &nbsp;VectorShift — Pipeline Builder
+
+Visual **drag-and-drop** builder for data-processing workflows.
+
+- 🎨 Node canvas with 9 node types (LLM, API, Filter…)
+- 🔍 Auto variable detection from `{{ template }}` syntax
+- 🔗 Dynamic handles + auto edge cleanup
+- ✅ DAG validation on submit
+
+`React` `FastAPI` `Python`
+
+**[Code ↗](https://github.com/yash07-bit/VectorShift)**
+
+</td>
+<td width="50%" valign="top">
+
+### ♻️ &nbsp;Smart Waste Classifier
+
+Type a waste item, get its category and disposal guidance instantly.
+
+- 🧠 Rule-based classifier — wet / dry / e-waste
+- 🎞️ Framer Motion transitions throughout
+- 💡 Example chips + educational category section
+- 📱 Animated, responsive landing
+
+`React` `Vite` `Tailwind` `Framer Motion`
+
+**[Code ↗](https://github.com/yash07-bit/waste_type_detector)**
+
+</td>
+</tr>
+</table>
 
 <br />
 
@@ -133,33 +149,26 @@ A full-stack travel listing app where users can publish, browse and review stays
 
 <br />
 
-## ⚔️ &nbsp;Competitive Programming
+## 📊 &nbsp;GitHub Activity
 
-<!--
-  Swap YOUR_LEETCODE_USERNAME for your actual LeetCode handle to make this card live.
-  Delete this block if you'd rather not show it.
--->
 <p align="center">
-  <img width="500" src="https://leetcard.jacoblin.cool/YOUR_LEETCODE_USERNAME?theme=nord&font=Fira%20Code&ext=heatmap" alt="LeetCode stats" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=yash07-bit&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&hide=issues&bg_color=00000000&title_color=0EA5E9&icon_color=38BDF8&text_color=808080&rank_icon=github" alt="GitHub stats" />
+  <img height="160" src="https://streak-stats.demolab.com?user=yash07-bit&hide_border=true&background=00000000&ring=0EA5E9&fire=6366F1&currStreakLabel=0EA5E9&sideLabels=808080&currStreakNum=808080&sideNums=808080&dates=808080&stroke=808080" alt="GitHub streak" />
 </p>
 
 <p align="center">
-  <a href="https://leetcode.com/u/YOUR_LEETCODE_USERNAME"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-  <a href="https://codeforces.com/profile/YOUR_CF_HANDLE"><img src="https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces" /></a>
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yash07-bit&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=0EA5E9&text_color=808080" alt="Top languages" />
 </p>
 
-<br />
-
-## 🐍 &nbsp;Watch My Contributions Get Eaten
-
 <!--
-  Requires the workflow at .github/workflows/snake.yml (included alongside this README).
-  It generates the SVGs into an `output` branch of this repo once a day.
+  The snake below is generated by .github/workflows/snake.yml into the
+  `output` branch. It stays blank until that workflow runs once —
+  Actions tab → "Generate Contribution Snake" → Run workflow.
 -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/github-snake.svg" />
-  <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/github-snake.svg" />
+  <img width="100%" alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/github-snake.svg" />
 </picture>
 
 <br />
@@ -173,6 +182,7 @@ A full-stack travel listing app where users can publish, browse and review stays
 <p align="center">
   <a href="mailto:w.prakash@iitg.ac.in"><img src="https://img.shields.io/badge/Say_Hello-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://linkedin.com/in/waghmareyash07"><img src="https://img.shields.io/badge/Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://yash-waghmare.netlify.app"><img src="https://img.shields.io/badge/See_My_Work-0EA5E9?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Portfolio" /></a>
 </p>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:6366F1,50:38BDF8,100:0EA5E9&height=130&section=footer&text=Always%20learning,%20building,%20improving.&fontSize=18&fontColor=FFFFFF&fontAlignY=72" />
+<p align="center"><sub>Always learning, building, improving.</sub></p>
