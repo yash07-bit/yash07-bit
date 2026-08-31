@@ -3,7 +3,8 @@
 Generate an aurora-themed GitHub stats card as a self-hosted SVG.
 
 Replaces github-readme-stats (whose public instance is DEPLOYMENT_PAUSED).
-Run by .github/workflows/snake.yml; output lands on the `output` branch.
+Run by .github/workflows/profile-assets.yml; output lands on the `output`
+branch, which the README's Activity section points at.
 
 Needs GITHUB_TOKEN in the environment for the GraphQL call. Without one it
 renders from REST-only data and leaves GraphQL-derived tiles at zero, so a
@@ -11,13 +12,14 @@ token outage degrades the card instead of failing the build.
 """
 import json, os, sys, urllib.request, urllib.error, datetime
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from theme import (BG, CYAN, SKY, INDIGO, VIOLET, FUCHSIA, TEXT, MUTED, DIM,
+                   MONO, SANS, esc, cut_rect, corner_bracket, defs_aurora,
+                   defs_grid, layer_grid)
+
 USER = os.environ.get("STATS_USER", "yash07-bit")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 OUT = os.environ.get("STATS_OUT", "dist/stats.svg")
-
-MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
-SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif"
-BG = "#080B12"
 
 QUERY = """
 query($login:String!) {
@@ -182,76 +184,95 @@ def collect():
     return d
 
 
-def esc(s):
-    return str(s).replace("&", "&amp;").replace("<", "&lt;")
-
-
 def render(d):
-    W, H = 1200, 300
-    p = []
-    a = p.append
-    a(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
-      f'fill="none" role="img" aria-label="GitHub activity statistics for {USER}">')
-    a('<defs>'
-      '<filter id="bl" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="80"/></filter>'
-      '<radialGradient id="g1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>'
-      '<radialGradient id="g2"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient>'
-      '<linearGradient id="num" x1="0" y1="0" x2="0" y2="1">'
-      '<stop offset="0" stop-color="#E2E8F0"/><stop offset="1" stop-color="#94A3B8"/></linearGradient>'
-      f'<clipPath id="c"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>')
-    a('<g clip-path="url(#c)">')
-    a(f'<rect width="{W}" height="{H}" fill="{BG}"/>')
-    a('<g filter="url(#bl)" opacity="0.45">'
-      f'<ellipse cx="90" cy="0" rx="240" ry="130" fill="url(#g1)"/>'
-      f'<ellipse cx="1120" cy="{H}" rx="240" ry="130" fill="url(#g2)"/></g>')
+    """Draw the card in the same visual language as hero.svg and stack.svg:
+    dark ground, blueprint grid, HUD brackets, cut-corner panels."""
+    W, H, uid = 1200, 320, "t"
+    a = []
+    a.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" '
+             f'height="{H}" fill="none" role="img" '
+             f'aria-label="GitHub activity statistics for {USER}">')
 
-    a(f'<text x="40" y="46" font-family="{MONO}" font-size="13" fill="#64748B" letter-spacing="2">activity</text>')
-    a(f'<text x="{W-40}" y="46" font-family="{MONO}" font-size="13" fill="#22D3EE" text-anchor="end">@{USER}</text>')
-    a(f'<line x1="40" y1="62" x2="{W-40}" y2="62" stroke="#FFFFFF" stroke-opacity="0.08"/>')
+    a.append("<defs>")
+    a.append(defs_aurora(uid))
+    a.append(defs_grid(uid, W, H, cell=40, fade_to=0.92))
+    a.append(f'<clipPath id="cl{uid}"><rect width="{W}" height="{H}" rx="18"/></clipPath>')
+    a.append(f'<linearGradient id="num{uid}" x1="0" y1="0" x2="0" y2="1">'
+             f'<stop offset="0" stop-color="#F1F5F9"/><stop offset="1" stop-color="{MUTED}"/>'
+             f'</linearGradient>')
+    a.append("</defs>")
 
+    a.append(f'<g clip-path="url(#cl{uid})">')
+    a.append(f'<rect width="{W}" height="{H}" fill="{BG}"/>')
+    a.append(f'<g filter="url(#bl{uid})" opacity="0.5">'
+             f'<ellipse cx="90" cy="0" rx="250" ry="130" fill="url(#au3{uid})"/>'
+             f'<ellipse cx="1120" cy="{H}" rx="250" ry="130" fill="url(#au2{uid})"/></g>')
+    a.append(layer_grid(uid, W, H, opacity=0.05))
+    for cx, cy, sx, sy in ((14, 14, 1, 1), (W - 14, 14, -1, 1),
+                           (14, H - 14, 1, -1), (W - 14, H - 14, -1, -1)):
+        a.append(corner_bracket(cx, cy, 18, sx, sy, CYAN, 0.45))
+
+    a.append(f'<text x="44" y="52" font-family="{MONO}" font-size="12.5" fill="{DIM}" '
+             f'letter-spacing="2.4">\u25c8 ACTIVITY</text>')
+    a.append(f'<text x="{W-44}" y="52" font-family="{MONO}" font-size="12.5" fill="{CYAN}" '
+             f'text-anchor="end" letter-spacing="1.4">@{USER}</text>')
+    a.append(f'<line x1="44" y1="68" x2="{W-44}" y2="68" stroke="#FFFFFF" stroke-opacity="0.08"/>')
+
+    # ── six stat panels ──
     tiles = [("contributions", d["contributions"]), ("total commits", d["commits"]),
              ("pull requests", d["prs"]),           ("current streak", d["cur"]),
              ("longest streak", d["long"]),         ("repositories", d["repos"])]
-    accents = ["#22D3EE", "#38BDF8", "#818CF8", "#A78BFA", "#C084FC", "#E879F9"]
+    accents = [CYAN, SKY, INDIGO, "#A78BFA", VIOLET, FUCHSIA]
+    TW, TH, GAP, X0, Y0 = 200, 88, 12, 44, 92
     for i, (label, val) in enumerate(tiles):
         col, row = i % 3, i // 3
-        x = 40 + col * 210
-        y = 122 + row * 92
-        a(f'<text x="{x}" y="{y}" font-family="{SANS}" font-size="40" font-weight="700" '
-          f'fill="url(#num)">{val}</text>')
-        a(f'<rect x="{x}" y="{y+12}" width="26" height="2.5" rx="1.25" fill="{accents[i]}"/>')
-        a(f'<text x="{x}" y="{y+34}" font-family="{MONO}" font-size="11.5" fill="#64748B" '
-          f'letter-spacing="1.2">{label}</text>')
+        x = X0 + col * (TW + GAP)
+        y = Y0 + row * (TH + GAP)
+        c = accents[i]
+        a.append(f'<path d="{cut_rect(x, y, TW, TH, 8)}" fill="#FFFFFF" fill-opacity="0.022" '
+                 f'stroke="{c}" stroke-opacity="0.20" stroke-width="1">'
+                 f'<animate attributeName="stroke-opacity" values="0.20;0.50;0.20" dur="5s" '
+                 f'begin="{i * 0.6:.1f}s" repeatCount="indefinite"/></path>')
+        a.append(f'<text x="{x+18}" y="{y+46}" font-family="{SANS}" font-size="36" '
+                 f'font-weight="700" fill="url(#num{uid})">{val}</text>')
+        a.append(f'<rect x="{x+18}" y="{y+56}" width="24" height="2.5" rx="1.25" fill="{c}"/>')
+        a.append(f'<text x="{x+18}" y="{y+74}" font-family="{MONO}" font-size="11" fill="{DIM}" '
+                 f'letter-spacing="1.2">{label}</text>')
 
-    LX, LW = 720, 440
-    a(f'<line x1="{LX-40}" y1="86" x2="{LX-40}" y2="{H-40}" stroke="#FFFFFF" stroke-opacity="0.08"/>')
-    a(f'<text x="{LX}" y="104" font-family="{MONO}" font-size="11.5" fill="#64748B" '
-      f'letter-spacing="1.2">top languages</text>')
+    # ── top languages ──
+    LX = X0 + 3 * (TW + GAP) + 28
+    LW = W - 44 - LX
+    a.append(f'<line x1="{LX-24}" y1="88" x2="{LX-24}" y2="{H-40}" stroke="#FFFFFF" '
+             f'stroke-opacity="0.08"/>')
+    a.append(f'<text x="{LX}" y="106" font-family="{MONO}" font-size="11" fill="{DIM}" '
+             f'letter-spacing="1.2">top languages</text>')
 
     langs = d["langs"] or [("No data", 100.0, "#30363D")]
-    a(f'<clipPath id="bar"><rect x="{LX}" y="120" width="{LW}" height="14" rx="7"/></clipPath>')
-    a('<g clip-path="url(#bar)">')
+    a.append(f'<clipPath id="bar{uid}"><rect x="{LX}" y="122" width="{LW}" height="14" rx="7"/></clipPath>')
+    a.append(f'<g clip-path="url(#bar{uid})">')
     x = LX
     for _, pct, color in langs:
         w = max(LW * pct / 100.0, 2)
-        a(f'<rect x="{x:.1f}" y="120" width="{w:.1f}" height="14" fill="{color}"/>')
+        a.append(f'<rect x="{x:.1f}" y="122" width="{w:.1f}" height="14" fill="{color}"/>')
         x += w
-    a(f'<rect x="{x:.1f}" y="120" width="{LW}" height="14" fill="#30363D"/>')
-    a('</g>')
+    a.append(f'<rect x="{x:.1f}" y="122" width="{LW}" height="14" fill="#30363D"/>')
+    a.append("</g>")
 
     for i, (name, pct, color) in enumerate(langs):
         col, row = i % 2, i // 2
-        lx = LX + col * 224
-        ly = 176 + row * 30
-        a(f'<circle cx="{lx+5}" cy="{ly-4}" r="5" fill="{color}"/>')
-        a(f'<text x="{lx+20}" y="{ly}" font-family="{SANS}" font-size="13.5" fill="#CBD5E1">{esc(name)}</text>')
-        a(f'<text x="{lx+200}" y="{ly}" font-family="{MONO}" font-size="12.5" fill="#64748B" '
-          f'text-anchor="end">{pct:.1f}%</text>')
+        lx = LX + col * (LW / 2 + 4)
+        ly = 178 + row * 30
+        a.append(f'<circle cx="{lx+5}" cy="{ly-4}" r="5" fill="{color}"/>')
+        a.append(f'<text x="{lx+20}" y="{ly}" font-family="{SANS}" font-size="13.5" '
+                 f'fill="#CBD5E1">{esc(name)}</text>')
+        a.append(f'<text x="{lx + LW/2 - 20:.0f}" y="{ly}" font-family="{MONO}" font-size="12.5" '
+                 f'fill="{DIM}" text-anchor="end">{pct:.1f}%</text>')
 
-    a('</g>')
-    a(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="16" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"/>')
-    a('</svg>')
-    return "".join(p)
+    a.append("</g>")
+    a.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="18" fill="none" '
+             f'stroke="#FFFFFF" stroke-opacity="0.10"/>')
+    a.append("</svg>")
+    return "".join(a)
 
 
 if __name__ == "__main__":
