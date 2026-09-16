@@ -1,14 +1,9 @@
-# Regenerates the contribution snake and the activity card daily and pushes
-# both to the `output` branch, which the README's Activity section links to.
+# Regenerates the contribution snake daily and pushes it to the `output`
+# branch, which the README's activity section links to.
 #
-# The activity card comes from scripts/gen_stats.py rather than
-# github-readme-stats, whose public instance is DEPLOYMENT_PAUSED (503).
-#
-# Ordering and error handling matter here: the stats card is generated FIRST,
-# and the snake step is allowed to fail. Platane/snk hits the GitHub scraping
-# endpoint and is the flakiest part of this job — when it aborted, it took the
-# publish step with it and stats.svg never reached the `output` branch, which
-# is what left the README's Activity section a broken image.
+# The old self-hosted stats card was retired in the redesign: the README now
+# carries its weight with projects, and a streak counter reading "1" says less
+# than the work does. scripts/gen_stats.py is in git history if it's wanted back.
 #
 # One-time setup: Repo Settings → Actions → General → Workflow permissions
 #                 → select "Read and write permissions" → Save.
@@ -30,27 +25,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  snake:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Generate activity card
-        run: python3 scripts/gen_stats.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STATS_USER: ${{ github.repository_owner }}
-          STATS_OUT: dist/stats.svg
-
-      # Allowed to fail: a flaky snake must not cost us the activity card.
+      # Platane/snk scrapes the contribution calendar and is occasionally
+      # flaky. If it fails, the job fails before publishing, so the last good
+      # SVGs stay on `output` and the README never shows a broken image.
       - name: Generate snake SVGs
-        id: snake
-        continue-on-error: true
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -61,13 +46,9 @@ jobs:
       - name: Verify artefacts
         run: |
           ls -la dist
-          test -s dist/stats.svg || { echo "::error::stats.svg missing or empty"; exit 1; }
-          if [ "${{ steps.snake.outcome }}" != "success" ]; then
-            echo "::warning::snake generation failed; keeping the previously published copy"
-          fi
+          test -s dist/snake-light.svg && test -s dist/snake-dark.svg
 
-      # keep_files so a step that failed this run leaves the last good file in
-      # place on `output` rather than deleting it from the README.
+      # keep_files so anything else already on `output` is left in place.
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
@@ -77,20 +58,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # Separate job on purpose: assets/*.svg are generated, so a hand-edit to them
-  # would be silently reverted by the next generator run. Worth failing loudly
-  # about — but not worth blocking the daily asset refresh over, which is why
-  # this does not gate `build`.
-  cards-drift-check:
+  # assets/hero.svg is generated, so a hand-edit to it would be silently
+  # reverted by the next generator run. Fail loudly about drift instead.
+  hero-drift-check:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Regenerate cards and diff
+      - name: Regenerate hero and diff
         run: |
-          python3 scripts/gen_cards.py
+          python3 scripts/gen_hero.py
           git diff --exit-code --stat assets/ || {
-            echo "::error::assets/*.svg differ from scripts/gen_cards.py output."
-            echo "Run 'python3 scripts/gen_cards.py' and commit the result."
+            echo "::error::assets/hero.svg differs from scripts/gen_hero.py output."
+            echo "Run 'python3 scripts/gen_hero.py' and commit the result."
             exit 1
           }
