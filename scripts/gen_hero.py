@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate assets/hero.svg — portfolio-inspired GitHub hero card."""
+"""Generate assets/hero.svg — YASH #07 engineering field notes style."""
 
 import os
 
@@ -10,18 +10,15 @@ OUT = os.path.join(
 )
 
 W, H = 1200, 390
-
 BG = "#F3F0E8"
-PAPER = "#F7F3EB"
 GRID = "#D8D4CC"
 TEXT = "#111111"
 MUTED = "#66615A"
-SUB = "#55514B"
+SUB = "#5F5A53"
 ORANGE = "#FF5A36"
 ORANGE_DEEP = "#FF7A45"
-BLACK = "#111111"
-SOFT = "#A7A39C"
 WHITE = "#FFFFFF"
+PAPER = "#F7F3EB"
 
 
 def esc(value):
@@ -48,17 +45,17 @@ def build(data):
         f'<rect x="42" y="72" width="34" height="5" rx="2" fill="url(#accent)"/>',
         f'<text x="42" y="150" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" letter-spacing="-3" fill="{TEXT}">{esc(data["name"])}</text>',
         f'<text x="45" y="192" font-family="monospace" font-size="17" font-weight="700" letter-spacing="4" fill="{SUB}">{esc(data["role"])}</text>',
-        '<rect x="45" y="211" width="180" height="3" fill="#FF5A36"/>',
-        '<rect x="42" y="255" width="205" height="49" rx="6" fill="#111111"/>',
-        '<text x="60" y="275" font-family="monospace" font-size="10" letter-spacing="2" fill="#A7A39C">EDUCATION</text>',
+        '<rect x="45" y="211" width="165" height="3" fill="#FF5A36"/>',
+        '<rect x="42" y="255" width="195" height="49" rx="6" fill="#111111"/>',
+        '<text x="60" y="275" font-family="monospace" font-size="10" letter-spacing="2" fill="#A7A39C">EDU</text>',
         f'<text x="60" y="294" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="{PAPER}">{esc(data["education"])}</text>',
-        '<rect x="262" y="255" width="285" height="49" rx="6" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>',
-        '<text x="280" y="275" font-family="monospace" font-size="10" letter-spacing="2" fill="#77716A">CURRENTLY</text>',
-        f'<text x="280" y="294" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="{TEXT}">{esc(data["currently"])}</text>',
-        '<rect x="562" y="255" width="250" height="49" rx="6" fill="#FF5A36"/>',
-        '<circle cx="583" cy="279" r="5" fill="#111111"/>',
-        '<text x="598" y="284" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#111111">OPEN TO SWE INTERNSHIPS</text>',
-        f'<text x="1125" y="315" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="900" fill="{TEXT}" opacity="0.07">{esc(data["id"])}</text>',
+        '<rect x="255" y="255" width="295" height="49" rx="6" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>',
+        '<text x="274" y="275" font-family="monospace" font-size="10" letter-spacing="2" fill="#77716A">CURRENT</text>',
+        f'<text x="274" y="294" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="{TEXT}">{esc(data["current"])}</text>',
+        '<rect x="567" y="255" width="240" height="49" rx="6" fill="#FF5A36"/>',
+        '<circle cx="588" cy="279" r="5" fill="#111111"/>',
+        '<text x="603" y="284" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#111111">OPEN TO SWE</text>',
+        f'<text x="1125" y="315" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="900" fill="{TEXT}" opacity="0.07">{esc(data["tag"])}</text>',
         '<line x1="42" y1="335" x2="1158" y2="335" stroke="#111111" stroke-width="1"/>',
         f'<text x="42" y="360" font-family="monospace" font-size="12" font-weight="700" letter-spacing="2" fill="{TEXT}">{esc(data["motto"])}</text>',
         f'<text x="1158" y="360" text-anchor="end" font-family="monospace" font-size="11" letter-spacing="1" fill="{MUTED}">{esc(data["location"])}</text>',
@@ -69,12 +66,12 @@ def build(data):
 
 HERO = {
     "label": "YASH #07",
-    "status": "STATUS: BUILDING",
+    "status": "STATUS://BUILDING",
     "name": "Yash Waghmare",
     "role": "FULL-STACK / WEB DEVELOPER",
     "education": "IIT GUWAHATI",
-    "currently": "WEBOPS HEAD @ SPIRIT",
-    "id": "#07",
+    "current": "WEBOPS HEAD @ SPIRIT",
+    "tag": "#07",
     "motto": "BUILD → BREAK → ITERATE → SHIP → REPEAT",
     "location": "GUWAHATI / NASHIK",
 }

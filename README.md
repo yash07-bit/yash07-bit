@@ -1,147 +1,204 @@
 <!--
-  Yash Waghmare · GitHub profile README
-  Portfolio-driven editorial profile matching the design language of yash-waghmare.netlify.app
+  YASH #07 · ENGINEERING FIELD NOTES
+  Portfolio DNA, GitHub-native presentation.
 -->
 
 <p align="center">
-  <img width="100%" src="./assets/hero.svg" alt="Yash Waghmare portfolio-style hero card" />
+  <img width="100%" src="./assets/hero.svg" alt="Yash Waghmare engineering field notes hero" />
 </p>
 
 <p align="center">
-  <a href="https://yash-waghmare.netlify.app"><b>Portfolio</b></a>
+  <a href="https://yash-waghmare.netlify.app"><b>PORTFOLIO</b></a>
   &nbsp;·&nbsp;
-  <a href="https://linkedin.com/in/waghmareyash07"><b>LinkedIn</b></a>
+  <a href="https://linkedin.com/in/waghmareyash07"><b>LINKEDIN</b></a>
   &nbsp;·&nbsp;
-  <a href="mailto:waghmareyash07@gmail.com"><b>Email</b></a>
+  <a href="mailto:waghmareyash07@gmail.com"><b>EMAIL</b></a>
 </p>
 
 <br />
 
-## 01 · About
-
-I’m <b>Yash Waghmare</b>, a <b>Full-Stack / Web Developer</b> from <b>IIT Guwahati</b>.
-
-I build across the stack: product thinking, interface design, data flow, backend systems, and deployment. My work sits at the intersection of frontend craft, engineering discipline, and shipping things that feel intuitive.
-
-I currently lead the web platform for <b>Spirit, IIT Guwahati</b> as <b>WebOps Head</b>, and also work as a <b>Senior Web Developer</b> with the Students’ Web Committee.
-
-<br />
-
-## 02 · Selected Work
+## 01 / ENGINEERING LOG
 
 <table>
   <tr>
-    <td valign="top" width="50%">
-      <h3>Velora</h3>
-      <sub>Fleet routing & optimisation</sub>
+    <td valign="top" width="62%">
+      <p><sub>LOG 001 // SYSTEM // ACTIVE</sub></p>
+      <h2>Mechanical engineer by degree.<br />Web developer by obsession.</h2>
       <p>
-        Constraint-aware routing system for structured delivery and commute optimisation.
+        I build interfaces, systems, and products that live between engineering and design.
+        My work sits in the space between thoughtful frontend craftsmanship and backend reliability.
       </p>
       <p>
-        <code>Next.js</code> <code>FastAPI</code> <code>Celery</code> <code>Redis</code> <code>VROOM</code> <code>PostgreSQL</code>
-      </p>
-      <p>
-        <a href="https://github.com/yash07-bit/optimization-main">Code</a>
-      </p>
-    </td>
-    <td valign="top" width="50%">
-      <h3>Wanderlust</h3>
-      <sub>Full-stack travel platform</sub>
-      <p>
-        End-to-end stays platform with listing, booking flow, auth, reviews, and search.
-      </p>
-      <p>
-        <code>Node.js</code> <code>Express</code> <code>MongoDB</code> <code>EJS</code>
-      </p>
-      <p>
-        <a href="https://github.com/yash07-bit/wanderlust">GitHub</a> &nbsp;·&nbsp; <a href="https://wanderlust-fuiy.onrender.com">Live</a>
+        I’m <b>Yash Waghmare</b>, a <b>Full-Stack / Web Developer</b> from <b>IIT Guwahati</b>.
+        I currently lead web for <b>Spirit, IIT Guwahati</b> as <b>WebOps Head</b>, and also work as a
+        <b>Senior Web Developer</b> with the Students’ Web Committee.
       </p>
     </td>
-  </tr>
-  <tr>
-    <td valign="top" width="50%">
-      <h3>Resume Builder</h3>
-      <sub>React-based builder</sub>
-      <p>
-        A resume creation experience for Students’ Web Committee workflows.
-      </p>
-      <p>
-        <code>React</code> <code>JavaScript</code> <code>Frontend</code>
-      </p>
-      <p>
-        <a href="https://github.com/yash07-bit/resume-builder">GitHub</a>
-      </p>
-    </td>
-    <td valign="top" width="50%">
-      <h3>NexaVault</h3>
-      <sub>Finance dashboard</sub>
-      <p>
-        Personal finance dashboard for budgets, categories, cash flow, and reporting.
-      </p>
-      <p>
-        <code>React 19</code> <code>Vite</code> <code>Tailwind</code> <code>Recharts</code>
-      </p>
-      <p>
-        <a href="https://github.com/yash07-bit/Finance-Dashboard">GitHub</a> &nbsp;·&nbsp; <a href="https://nexa-vault-three.vercel.app">Live</a>
-      </p>
+    <td valign="top" width="38%">
+      <pre><code>SYS://YASH.WAGHMARE
+ID://#07
+STATUS://BUILDING
+MODE://SHIPPING
+LOCATION://IIT GUWAHATI
+FOCUS://FRONTEND · BACKEND · SYSTEMS</code></pre>
     </td>
   </tr>
 </table>
 
 <br />
 
-## 03 · Experience
+## 02 / SELECTED BUILDS
 
-- <b>WebOps Head</b> — Spirit, IIT Guwahati  
-  Leading the web platform and release workflow for the annual festival.
-
-- <b>Senior Web Developer</b> — Students’ Web Committee  
-  Building institutional web experiences and frontend systems for the campus ecosystem.
-
-- <b>Data Analytics Virtual Internship</b> — Deloitte Australia  
-  Worked with structured data and dashboard analysis.
-
-- <b>Bronze Medal</b> — Kriti Inter-Hostel Tech Competition  
-  For Velora, the fleet routing and optimisation system.
-
-<br />
-
-## 04 · Toolbox
+### 01 · VELORA
 
 <table>
   <tr>
-    <td width="20%"><b>Frontend</b></td>
+    <td valign="top" width="60%">
+      <p><b>Fleet routing & optimisation</b></p>
+      <p>
+        A full-stack logistics and route optimisation system built around constraints, feasibility,
+        and operational clarity.
+      </p>
+      <p>
+        <code>Next.js</code> <code>FastAPI</code> <code>Celery</code> <code>Redis</code>
+        <code>VROOM</code> <code>PostgreSQL</code> <code>OSRM</code>
+      </p>
+    </td>
+    <td valign="top" width="40%">
+      <p><sub>TYPE // FULL-STACK</sub></p>
+      <p><a href="https://github.com/yash07-bit/optimization-main">SOURCE</a></p>
+    </td>
+  </tr>
+</table>
+
+### 02 · WANDERLUST
+
+<table>
+  <tr>
+    <td valign="top" width="60%">
+      <p><b>Full-stack travel platform</b></p>
+      <p>
+        A complete stays experience with listing flows, auth, reviews, search, and deployment-ready backend logic.
+      </p>
+      <p>
+        <code>Node.js</code> <code>Express</code> <code>MongoDB</code> <code>EJS</code>
+      </p>
+    </td>
+    <td valign="top" width="40%">
+      <p><sub>TYPE // PRODUCT</sub></p>
+      <p><a href="https://github.com/yash07-bit/wanderlust">SOURCE</a> · <a href="https://wanderlust-fuiy.onrender.com">LIVE</a></p>
+    </td>
+  </tr>
+</table>
+
+### 03 · RESUME BUILDER
+
+<table>
+  <tr>
+    <td valign="top" width="60%">
+      <p><b>React-based resume builder</b></p>
+      <p>
+        A frontend experience built for Students’ Web Committee workflows and repeatable document generation.
+      </p>
+      <p>
+        <code>React</code> <code>JavaScript</code> <code>Frontend</code>
+      </p>
+    </td>
+    <td valign="top" width="40%">
+      <p><sub>TYPE // FRONTEND</sub></p>
+      <p><a href="https://github.com/yash07-bit/resume-builder">SOURCE</a></p>
+    </td>
+  </tr>
+</table>
+
+### 04 · NEXAVAULT
+
+<table>
+  <tr>
+    <td valign="top" width="60%">
+      <p><b>Personal finance dashboard</b></p>
+      <p>
+        Budgeting and reporting interface focused on clarity, structure, and fast financial decision-making.
+      </p>
+      <p>
+        <code>React 19</code> <code>Tailwind CSS</code> <code>Vite</code> <code>Recharts</code>
+      </p>
+    </td>
+    <td valign="top" width="40%">
+      <p><sub>TYPE // DASHBOARD</sub></p>
+      <p><a href="https://github.com/yash07-bit/Finance-Dashboard">SOURCE</a> · <a href="https://nexa-vault-three.vercel.app">LIVE</a></p>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+## 03 / STACK
+
+<p align="center">
+  <img width="100%" src="./assets/stack.svg" alt="Yash Waghmare technology stack" />
+</p>
+
+<table>
+  <tr>
+    <td width="20%"><b>FRONTEND</b></td>
     <td>React · Next.js · JavaScript · TypeScript · Tailwind CSS</td>
   </tr>
   <tr>
-    <td width="20%"><b>Backend</b></td>
+    <td width="20%"><b>BACKEND</b></td>
     <td>Node.js · Express · FastAPI · Celery · REST APIs</td>
   </tr>
   <tr>
-    <td width="20%"><b>Data</b></td>
+    <td width="20%"><b>DATA</b></td>
     <td>MongoDB · PostgreSQL · MySQL · Redis</td>
   </tr>
   <tr>
-    <td width="20%"><b>Engineering</b></td>
+    <td width="20%"><b>ENGINEERING</b></td>
     <td>System Design · DSA · Performance · Caching · Queues</td>
   </tr>
   <tr>
-    <td width="20%"><b>Tools</b></td>
+    <td width="20%"><b>TOOLS</b></td>
     <td>Git · GitHub · Figma · Vercel · Render · VS Code</td>
   </tr>
 </table>
 
 <br />
 
-## 05 · How I Think
+## 04 / EXPERIENCE
 
-I like to turn complex systems into interfaces and workflows that people can understand at a glance. I care about structure, clarity, performance, and the little details that make software feel intentional.
-
-My work usually moves through: product framing → clean system design → interface clarity → reliable delivery → iteration.
+<ul>
+  <li><b>2026 → NOW</b> — <b>WebOps Head</b> · Spirit, IIT Guwahati</li>
+  <li><b>2026 → NOW</b> — <b>Senior Web Developer</b> · Students' Web Committee</li>
+  <li><b>2026</b> — <b>Bronze Medal</b> · Kriti Inter-Hostel Tech Competition</li>
+  <li><b>2026</b> — <b>Data Analytics Virtual Internship</b> · Deloitte Australia</li>
+</ul>
 
 <br />
 
-## 06 · Activity
+## 05 / ENGINEERING LOG
+
+<ul>
+  <li><b>LOG 001</b> — Designing interfaces that feel effortless while the system underneath stays honest.</li>
+  <li><b>LOG 002</b> — Fleet optimisation taught me that the real work is constraint handling, not just “smart” code.</li>
+  <li><b>LOG 003</b> — Good backend systems disappear into the product experience.</li>
+  <li><b>LOG 004</b> — Shipping production software means balancing polish, reliability, and speed.</li>
+</ul>
+
+<br />
+
+## 06 / BUILD LOOP
+
+<p align="center">
+  <b>BUILD</b> → <b>BREAK</b> → <b>ITERATE</b> → <b>SHIP</b> → <b>REPEAT</b>
+</p>
+
+<p align="center">
+  I care about systems that are clear, useful, and resilient — not just visually impressive.
+</p>
+
+<br />
+
+## 07 / ACTIVITY
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/stats.svg" alt="GitHub statistics" width="100%" />
@@ -157,12 +214,18 @@ My work usually moves through: product framing → clean system design → inter
 
 <br />
 
-## 07 · Let’s Build Something
+## 08 / OPEN TO BUILD
 
-If you’re building something real, I’d like to hear about it.
+<p align="center">
+  <b>FULL-STACK SYSTEMS</b> · <b>FRONTEND ENGINEERING</b> · <b>INTERESTING PROBLEMS</b>
+</p>
 
-- <a href="https://yash-waghmare.netlify.app">Portfolio</a>
-- <a href="https://linkedin.com/in/waghmareyash07">LinkedIn</a>
-- <a href="mailto:waghmareyash07@gmail.com">Email</a>
+<p align="center">
+  <a href="https://yash-waghmare.netlify.app"><b>PORTFOLIO</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/waghmareyash07"><b>LINKEDIN</b></a>
+  &nbsp;·&nbsp;
+  <a href="mailto:waghmareyash07@gmail.com"><b>EMAIL</b></a>
+</p>
 
-<p align="center"><sub>BUILD → BREAK → ITERATE → SHIP → REPEAT</sub></p>
+<p align="center"><sub>YASH #07 · BUILD → BREAK → ITERATE → SHIP → REPEAT</sub></p>
