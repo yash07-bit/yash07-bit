@@ -19,7 +19,7 @@
 <rect x="45" y="211" width="180" height="3" fill="#FF5A36"/>
 <rect x="42" y="255" width="205" height="49" rx="6" fill="#111111"/>
 <text x="60" y="275" font-family="monospace" font-size="10" letter-spacing="2" fill="#A7A39C">EDUCATION</text>
-<text x="60" y="294" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#F3F0E8">IIT GUWAHATI</text>
+<text x="60" y="294" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#F7F3EB">IIT GUWAHATI</text>
 <rect x="262" y="255" width="285" height="49" rx="6" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
 <text x="280" y="275" font-family="monospace" font-size="10" letter-spacing="2" fill="#77716A">CURRENTLY</text>
 <text x="280" y="294" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#111111">WEBOPS HEAD @ SPIRIT</text>
