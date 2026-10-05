@@ -10,13 +10,14 @@
 -->
 
 <p align="center">
-  <img width="100%" src="./assets/hero.svg" alt="Terminal window reading: whoami — Yash Waghmare, Software Engineer · Full-Stack Developer · Builder. WebOps Head at Spirit IITG, Senior Web Developer at SWC IITG, B.Tech at IIT Guwahati. Loop: build, ship, learn, repeat." />
+  <img width="100%" src="./assets/hero.svg" alt="Yash Waghmare terminal hero — software engineer and full-stack developer from IIT Guwahati." />
 </p>
 
+<h1 align="center">I BUILD THINGS THAT FEEL alive.</h1>
+
 <p align="center">
-  I build full-stack products end to end — data model, API, interface, deploy.<br />
-  I'm studying Mechanical Engineering at IIT Guwahati, picked up software between problem sets, and it stuck.<br />
-  Now I run web for Spirit, IITG's sports festival, and build AI agents that take real actions with a human in the loop.
+  <b>Full-Stack Developer</b> · IIT Guwahati<br />
+  I turn messy ideas into products people can use, trust, and remember.
 </p>
 
 <p align="center">

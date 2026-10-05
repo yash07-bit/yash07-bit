@@ -20,10 +20,10 @@ OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                    "assets", "hero.svg")
 
 # GitHub dark palette, so the card sits naturally next to code blocks.
-BG, BAR, BORDER = "#0D1117", "#161B22", "#30363D"
-TEXT, MUTED, DIM = "#E6EDF3", "#8B949E", "#6E7681"
-BLUE, GREEN, PURPLE = "#79C0FF", "#7EE787", "#D2A8FF"
-ORANGE, RED, YELLOW = "#FFA657", "#FF7B72", "#E3B341"
+BG, BAR, BORDER = "#0A0A0B", "#111315", "#2A2A2D"
+TEXT, MUTED, DIM = "#F5F1E8", "#B9B0A2", "#7C746A"
+BLUE, GREEN, PURPLE = "#8AB4F8", "#B9D97A", "#CDB8FF"
+ORANGE, RED, YELLOW = "#F0B35A", "#F26D6D", "#E6C76C"
 
 MONO = "ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace"
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
@@ -130,20 +130,20 @@ def build(d):
 HERO = {
     "aria": "Yash Waghmare — Software Engineer, Full-Stack Developer, Builder. "
             "WebOps Head at Spirit IIT Guwahati; Senior Web Developer at SWC IIT Guwahati.",
-    "title": "yash@iitg: ~",
+    "title": "yash@portfolio: ~",
     "name": "Yash Waghmare",
-    "roles": ["Software Engineer", "Full-Stack Developer", "Builder"],
+    "roles": ["Full-Stack Developer", "Web Engineer", "Builder"],
     "user": "yash",
-    "host": "iitg",
+    "host": "portfolio",
     "facts": [
         ("role", "WebOps Head · Spirit IITG"),
-        ("also", "Sr. Web Developer · SWC IITG"),
+        ("also", "Sr. Web Dev · SWC IITG"),
         ("edu", "B.Tech · IIT Guwahati"),
         ("stack", "TypeScript · Node · React · Python"),
-        ("focus", "backend · AI agents · DSA"),
+        ("focus", "backend · AI agents · design"),
     ],
     "loop": ["build", "ship", "learn", "repeat"],
-    "status_right": "IIT Guwahati, India",
+    "status_right": "portfolio / github",
 }
 
 
