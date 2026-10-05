@@ -10,14 +10,12 @@
 -->
 
 <p align="center">
-  <img width="100%" src="./assets/hero.svg" alt="Yash Waghmare terminal hero — software engineer and full-stack developer from IIT Guwahati." />
+  <img width="100%" src="./assets/hero.svg" alt="Yash Waghmare portfolio-style hero card." />
 </p>
 
-<h1 align="center">I BUILD THINGS THAT FEEL alive.</h1>
-
 <p align="center">
-  <b>Full-Stack Developer</b> · IIT Guwahati<br />
-  I turn messy ideas into products people can use, trust, and remember.
+  <b>Full-Stack / Web Developer</b> · IIT Guwahati<br />
+  Building products from idea to deploy, with a bias for systems that feel simple and sharp.
 </p>
 
 <p align="center">
