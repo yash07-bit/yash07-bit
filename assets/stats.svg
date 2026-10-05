@@ -1,0 +1,43 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#D8D4CC" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF5A36"/>
+      <stop offset="100%" stop-color="#FF7A45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" rx="18" fill="#F3F0E8"/>
+  <rect x="1" y="1" width="1198" height="298" rx="18" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="18" fill="none" stroke="#111111" stroke-width="2"/>
+
+  <text x="44" y="42" font-family="monospace" font-size="12" font-weight="700" letter-spacing="2" fill="#111111">ACTIVITY // YASH #07</text>
+  <text x="1156" y="42" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#66615A">SYSTEM SUMMARY</text>
+
+  <rect x="44" y="64" width="40" height="5" rx="2" fill="url(#accent)"/>
+
+  <rect x="44" y="98" width="250" height="130" rx="10" fill="#111111"/>
+  <text x="64" y="125" font-family="monospace" font-size="10" letter-spacing="2" fill="#A7A39C">COMMITS</text>
+  <text x="64" y="182" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" fill="#F3F0E8">248</text>
+  <text x="64" y="208" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#A7A39C">ENGINEERING LOG</text>
+
+  <rect x="318" y="98" width="250" height="130" rx="10" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+  <text x="338" y="125" font-family="monospace" font-size="10" letter-spacing="2" fill="#66615A">REPOS</text>
+  <text x="338" y="182" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" fill="#111111">16</text>
+  <text x="338" y="208" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#66615A">ACTIVE SYSTEMS</text>
+
+  <rect x="592" y="98" width="250" height="130" rx="10" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+  <text x="612" y="125" font-family="monospace" font-size="10" letter-spacing="2" fill="#66615A">STREAK</text>
+  <text x="612" y="182" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" fill="#111111">32</text>
+  <text x="612" y="208" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#66615A">DAYS</text>
+
+  <rect x="866" y="98" width="290" height="130" rx="10" fill="#FF5A36"/>
+  <text x="886" y="125" font-family="monospace" font-size="10" letter-spacing="2" fill="#111111">STATUS</text>
+  <text x="886" y="182" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#111111">BUILDING</text>
+  <text x="886" y="208" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#111111">SHIP MODE</text>
+
+  <line x1="44" y1="260" x2="1156" y2="260" stroke="#111111" stroke-width="1"/>
+  <text x="44" y="282" font-family="monospace" font-size="11" letter-spacing="2" fill="#111111">LOG // BUILD → BREAK → ITERATE → SHIP</text>
+</svg>

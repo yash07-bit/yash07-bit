@@ -201,7 +201,15 @@ FOCUS://FRONTEND · BACKEND · SYSTEMS</code></pre>
 ## 07 / ACTIVITY
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yash07-bit/yash07-bit/output/stats.svg" alt="GitHub statistics" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=yash07-bit&show_icons=true&count_private=true&hide_border=true&title_color=111111&text_color=111111&icon_color=FF5A36&bg_color=F3F0E8&border_color=D8D4CC&ring_color=FF5A36&custom_title=YASH%20%2307%20SYSTEM%20SUMMARY" alt="Yash Waghmare GitHub statistics" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=yash07-bit&theme=default&background=F3F0E8&border=D8D4CC&stroke=111111&ring=FF5A36&fire=FF5A36&currStreakNum=111111&sideNums=111111&currStreakLabel=111111&sideLabels=111111&dates=111111" alt="Yash Waghmare GitHub streak" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yash07-bit&layout=compact&hide_border=true&title_color=111111&text_color=111111&icon_color=FF5A36&bg_color=F3F0E8&border_color=D8D4CC" alt="Yash Waghmare top languages" width="70%" />
 </p>
 
 <p align="center">
